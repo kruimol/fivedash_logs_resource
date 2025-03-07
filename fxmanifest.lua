@@ -1,14 +1,10 @@
-fx_version 'cerulean'
+author 'fivedash'
+description 'Fivedash Logs'
+version '0.0.1'
+url 'https://fivedash.nl'
+
+server_script 'config.lua'
+server_script 'server.lua'
+
 game 'gta5'
-
-author 'Kruimol'
-description 'The fivedash logs resource'
-version '1.0.0'
-
-resource_type 'gametype' { name = 'My awesome game type!' }
-
-server_script {
-    'server.lua',
-    'config.lua'
-}
-server_export 'SayHello'
+fx_version 'cerulean'
