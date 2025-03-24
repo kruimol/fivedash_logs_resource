@@ -1,3 +1,3 @@
 Config = {}
-Config.ApiToken = "IMfKX9-6K2T2U-Uqp1xr-ibuOct-EO6Iy6-enDSRI"
-Config.VerifyToken = "U1d1nu-8stt1x-PRRhpj-mUBxBS-r2ZGBQ-DR4Uz7"
+Config.ApiToken = "XEJQ4t-PpTZ4e-6aH2Eq-LjOQAz-Ue5Q54-kI4bjd"
+Config.VerifyToken = "LnkKxK-8i6KjB-ex2A0k-NNg62O-eost3m-mJc0Sj"
