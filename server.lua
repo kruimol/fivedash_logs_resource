@@ -14,7 +14,8 @@ else
             end
         end, 'POST', json.encode({
             ApiToken = Config.ApiToken,
-            VerifyToken = Config.VerifyToken
+            VerifyToken = Config.VerifyToken,
+            ServiceName = GetCurrentResourceName()
         }), {
             ['Content-Type'] = 'application/json'
         })
@@ -36,6 +37,16 @@ exports('addlog', function(category, loginfo)
         }), {
             ['Content-Type'] = 'application/json'
         })
+    end
+end)
+
+SetHttpHandler(function(request, response)
+    if request.method == 'GET' and request.path == '/ping' then -- if a GET request was sent to the `/ping` path
+        response.writeHead(200, { ['Content-Type'] = 'application/json' }) -- set the response status code to `200 OK` and the body content type to plain text
+        response.send('{"succes": true, "message": "pong"}') -- respond to the request with `pong`
+    else -- otherwise
+        response.writeHead(404) -- set the response status code to `404 Not Found`
+        response.send() -- respond to the request with no data
     end
 end)
 
